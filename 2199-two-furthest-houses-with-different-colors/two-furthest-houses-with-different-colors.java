@@ -1,17 +1,20 @@
 class Solution {
-    public int maxDistance(int[] colors) 
-    {
-        int max=Integer.MIN_VALUE;
-        for(int i=0; i<colors.length; i++)
-        {
-            for(int j=0; j<colors.length; j++)
-            {
-                if(i!=j && colors[i]!=colors[j])
-                {
-                    max=Math.max(max,Math.abs(i-j));
-                }
+    public int maxDistance(int[] colors) {
+        int n = colors.length;
+        int maxDist = 0;
+        for (int i = n - 1; i > 0; i--) {
+            if (colors[i] != colors[0]) {
+                maxDist = Math.max(maxDist, i); // distance is i - 0
+                break; // Found the furthest one for this side
+            }
+        }   
+        for (int i = 0; i < n - 1; i++) {
+            if (colors[i] != colors[n - 1]) {
+                maxDist = Math.max(maxDist, (n - 1) - i);
+                break; // Found the furthest one for this side
             }
         }
-    return max;    
+        
+        return maxDist;
     }
 }
