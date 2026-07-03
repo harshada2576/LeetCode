@@ -1,42 +1,45 @@
-class Solution { 
-    int reverse(int num) { 
-        long reversed = 0; 
-        while (num != 0) { 
-            int digit = num % 10; 
-            reversed = reversed * 10 + digit; 
-            num /= 10; 
-        } 
-        if (reversed > Integer.MAX_VALUE || reversed < Integer.MIN_VALUE) {
-            return 0; 
+class Solution 
+{
+    int reverse(int num)
+    {
+        int reversed = 0;
+
+        while (num != 0) {
+            int digit = num % 10;
+            
+            reversed = reversed * 10 + digit;
+            
+            num /= 10;
         }
-        return (int) reversed; 
-    } 
+    return reversed;
+    }
 
-    boolean isPrime(int n) { 
-        if (n <= 1) return false; 
-        if (n == 2 || n == 3) return true;
-        if (n % 2 == 0 || n % 3 == 0) return false;
-        
-        for (int i = 5; i * i <= n; i += 6) { 
-            if (n % i == 0 || n % (i + 2) == 0) { 
-                return false; 
-            } 
-        } 
-        return true; 
-    } 
+  boolean isPrime(int n) {
+    // 1 and negative numbers are not prime
+    if (n <= 1) {
+        return false;
+    }
+    
+    // Check for factors up to the square root of n
+    for (int i = 2; i <= Math.sqrt(n); i++) {
+        if (n % i == 0) {
+            return false; // Found a factor, not prime
+        }
+    }
+    
+    return true; // No factors found, it is prime
+}
 
-    public int sumOfPrimesInRange(int n) { 
-        int j = reverse(n); 
-        
-        int start = Math.min(n, j);
-        int end = Math.max(n, j);
-        
-        int sum = 0; 
-        for (int i = start; i <= end; i++) { 
-            if (isPrime(i)) {
-                sum += i; 
-            }
-        } 
-        return sum; 
-    } 
+    public int sumOfPrimesInRange(int n) {
+    int sum=0;
+    int j=reverse(n);
+    int start = Math.min(n, j);
+    int end = Math.max(n, j);
+    for(int i=start; i<=end; i++)
+    {
+        if(isPrime(i))
+            sum+=i;
+    }
+    return sum;    
+    }
 }
