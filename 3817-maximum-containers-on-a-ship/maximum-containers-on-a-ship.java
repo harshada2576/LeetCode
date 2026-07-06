@@ -6,12 +6,12 @@ class Solution {
             return cells;
         else
             {
-                int c=0;
-                while(c*w <= maxWeight)
+                int c=cells;
+                while(c*w > maxWeight)
                 {
-                    c++;
+                    c--;
                 }
-                return c-1;
+                return c;
             }
         
     }
