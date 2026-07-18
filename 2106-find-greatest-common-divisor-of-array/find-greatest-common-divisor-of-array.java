@@ -8,9 +8,9 @@ class Solution {
     public int findGCD(int[] nums) 
     {
         Arrays.sort(nums);
-        int max=nums[nums.length-1];
-        int min=nums[0];
-        return getGCD(min,max);
+        //int max=nums[nums.length-1];
+        //int min=nums[0];
+        return getGCD(nums[nums.length-1],nums[0]);
         
     }
 }
