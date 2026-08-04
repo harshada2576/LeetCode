@@ -8,13 +8,12 @@ class Solution {
         
         if (nums == null || nums.length == 0) return ans;
 
-        int min = Arrays.stream(nums).min().getAsInt();
-        int max = Arrays.stream(nums).max().getAsInt();
         Arrays.sort(nums);
         
         int i = 0; 
-        int current = min; 
-        
+        int current = nums[0]; 
+        int min = nums[0];
+        int max=nums[nums.length-1];
         while (current <= max) {
             if (nums[i] == current) {
                 i++;
