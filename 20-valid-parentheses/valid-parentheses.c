@@ -1,9 +1,9 @@
 #include <stdbool.h>
 #include <string.h>
-
 bool isValid(char* s) {
     int len = strlen(s);
-    if (len % 2 != 0) return false;
+    if (len % 2 != 0) 
+        return false;
 
     char stack[len];
     int top = -1;
@@ -15,7 +15,8 @@ bool isValid(char* s) {
             stack[++top] = c;
         } 
         else {
-            if (top == -1) return false; 
+            if (top == -1) 
+                return false; 
 
             if ((c == ')' && stack[top] != '(') ||
                 (c == '}' && stack[top] != '{') ||
