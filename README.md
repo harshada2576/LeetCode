@@ -1,18 +1,49 @@
-# LeetCode
+<div align="center">
 
-Archive of accepted coding challenge solutions, synced by [AlgorithmHub](https://github.com/dev-minsoo/AlgorithmHub).
+# 🧠 Coding Solutions
 
-## Summary
+![Total Solved](https://img.shields.io/badge/Total_Solved-1-blue?style=for-the-badge)
+![Streak](https://img.shields.io/badge/Streak-1_days-orange?style=for-the-badge)
+![Last Synced](https://img.shields.io/badge/Last_Synced-8--19--2026-green?style=for-the-badge)
 
-| Platform | Solved |
-| --- | ---: |
-| LeetCode | 1 |
-| 프로그래머스 | 0 |
-| HackerRank | 0 |
-| Total | 1 |
+> 🚀 Auto-synced by [**PushMyCode**](https://github.com/PushMyCode-HQ) — solve it, forget it, it's on GitHub.
 
-## Platforms
+</div>
 
-- [LeetCode](./Leetcode)
-- [프로그래머스](./%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4)
-- [HackerRank](./HackerRank)
+---
+
+## 📊 Stats
+
+| Difficulty | Solved |
+|:---:|:---:|
+| 🟢 Easy | **1** |
+| 🟡 Medium | **0** |
+| 🔴 Hard | **0** |
+| **Total** | **1** |
+
+## 🛠️ Languages
+
+| Language | Solutions |
+|:---:|:---:|
+| Java | **1** |
+
+## 📂 Repository Structure
+
+```
+📦 coding-solutions/
+├── leetcode/
+│   ├── easy/
+│   ├── medium/
+│   └── hard/
+├── hackerrank/
+├── codechef/
+└── gfg/
+```
+
+---
+
+<div align="center">
+
+*Last updated: 2026-08-19* · Powered by [**PushMyCode**](https://github.com/PushMyCode-HQ)
+
+</div>
