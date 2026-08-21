@@ -1,16 +1,15 @@
 class Solution {
     public int[] buildArray(int[] nums) {
-        int mask = 1023; // 2^10 - 1 (10 bits set to 1)
+        int n = nums.length;
         
-        // Step 1: Encode new value into higher 10 bits
-        for (int i = 0; i < nums.length; i++) {
-            int newValue = nums[nums[i]] & mask;
-            nums[i] |= (newValue << 10);
+        // Step 1: Encode both old and new values into nums[i]
+        for (int i = 0; i < n; i++) {
+            nums[i] = nums[i] + n * (nums[nums[i]] % n);
         }
         
-        // Step 2: Shift right by 10 to leave only the new values
-        for (int i = 0; i < nums.length; i++) {
-            nums[i] >>= 10;
+        // Step 2: Extract the new values
+        for (int i = 0; i < n; i++) {
+            nums[i] = nums[i] / n;
         }
         
         return nums;
