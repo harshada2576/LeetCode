@@ -49,7 +49,7 @@ ans = [nums[nums[0]], nums[nums[1]], nums[nums[2]], nums[nums[3]], nums[nums[4]]
 **Language:** Java  
 **Runtime:** 2 ms (beats 5.61%)  
 **Memory:** 47.4 MB (beats 14.89%)  
-**Submitted:** 2026-08-21T16:29:03.718Z  
+**Submitted:** 2026-08-21T16:33:57.086Z  
 
 ```java
 class Solution {
