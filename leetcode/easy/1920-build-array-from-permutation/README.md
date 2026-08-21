@@ -48,23 +48,22 @@ ans = [nums[nums[0]], nums[nums[1]], nums[nums[2]], nums[nums[3]], nums[nums[4]]
 
 **Language:** Java  
 **Runtime:** 2 ms (beats 5.61%)  
-**Memory:** 47.5 MB (beats 14.89%)  
-**Submitted:** 2026-08-21T16:28:43.008Z  
+**Memory:** 47.4 MB (beats 14.89%)  
+**Submitted:** 2026-08-21T16:29:03.718Z  
 
 ```java
 class Solution {
     public int[] buildArray(int[] nums) {
-        int mask = 1023; // 2^10 - 1 (10 bits set to 1)
+        int n = nums.length;
         
-        // Step 1: Encode new value into higher 10 bits
-        for (int i = 0; i < nums.length; i++) {
-            int newValue = nums[nums[i]] & mask;
-            nums[i] |= (newValue << 10);
+        // Step 1: Encode both old and new values into nums[i]
+        for (int i = 0; i < n; i++) {
+            nums[i] = nums[i] + n * (nums[nums[i]] % n);
         }
         
-        // Step 2: Shift right by 10 to leave only the new values
-        for (int i = 0; i < nums.length; i++) {
-            nums[i] >>= 10;
+        // Step 2: Extract the new values
+        for (int i = 0; i < n; i++) {
+            nums[i] = nums[i] / n;
         }
         
         return nums;
