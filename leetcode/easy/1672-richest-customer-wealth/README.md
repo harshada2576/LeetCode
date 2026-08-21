@@ -54,22 +54,20 @@ Output: 17
 ## Solution
 
 **Language:** Java  
-**Runtime:** 1 ms (beats 15.78%)  
-**Memory:** 44.3 MB (beats 87.74%)  
-**Submitted:** 2026-08-21T17:11:25.709Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 44.6 MB (beats 56.24%)  
+**Submitted:** 2026-08-21T17:15:35.938Z  
 
 ```java
 class Solution {
     public int maximumWealth(int[][] accounts) {
-        int max=Integer.MIN_VALUE,sum=0;
-        for(int i=0; i<accounts.length; i++)
-        {
-            for(int j=0; j<accounts[i].length; j++)
-            {
-                sum+=accounts[i][j];
+        int max = Integer.MIN_VALUE, sum = 0;
+        for (int i = 0; i < accounts.length; i++) {
+            for (int j = 0; j < accounts[i].length; j++) {
+                sum += accounts[i][j];
             }
-            max=Math.max(max,sum);
-            sum=0;
+            max = Math.max(max, sum);
+            sum = 0;
         }
         return max;
     }
