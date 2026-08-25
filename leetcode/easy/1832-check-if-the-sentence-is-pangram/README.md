@@ -37,36 +37,21 @@ Output: false
 ## Solution
 
 **Language:** Java  
-**Runtime:** 3 ms (beats 34.69%)  
-**Memory:** 43.2 MB (beats 17.34%)  
-**Submitted:** 2026-08-22T17:15:40.458Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 43.1 MB (beats 17.19%)  
+**Submitted:** 2026-08-25T13:36:05.220Z  
 
 ```java
-import java.util.ArrayList;
-
 class Solution {
     public boolean checkIfPangram(String sentence) {
-        if (sentence.length() < 26) {
-            return false;
-        }
-        if(sentence.length() == 1)
-            return true;
-
-        ArrayList<Character> seen = new ArrayList<>();
-
-        for (char ch : sentence.toCharArray()) {
-            // Add to list only if character isn't already present
-            if (!seen.contains(ch)) {
-                seen.add(ch);
-            }
-            
-            // Early return if all 26 letters are present
-            if (seen.size() == 26) {
-                return true;
+        for(char ch='a';ch<='z';ch++)
+        {
+            if(sentence.indexOf(ch)<0)
+            {
+                return false;
             }
         }
-
-        return seen.size() == 26;
+        return true;
     }
 }
 ```
