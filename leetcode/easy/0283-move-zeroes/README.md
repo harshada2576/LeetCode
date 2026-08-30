@@ -40,9 +40,9 @@ Output: [0]
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.9 MB  
-**Submitted:** 2026-08-30T14:41:04.169Z  
+**Runtime:** 2 ms (beats 91.93%)  
+**Memory:** 47.8 MB (beats 57.58%)  
+**Submitted:** 2026-08-30T14:41:08.803Z  
 
 ```java
 class Solution {
